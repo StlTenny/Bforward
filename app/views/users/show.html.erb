@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>E-mail Address</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Encrypted Password</b>
+  <%= @user.encrypted_password %>
+</p>
+
+<p>
+  <b>Sign in count</b>
+  <%= @user.sign_in_count %>
+</p>
+
+<p>
+  <b>Identification</b>
+  <%= @user.id %>
+</p>
+
+<%= link_to 'Edit', edit_user_registration_path(@user) %> |
+<%= link_to 'Back', users_path %>

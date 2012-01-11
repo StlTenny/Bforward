@@ -1,0 +1,26 @@
+<h1>Listing Users</h1>
+<p id="notice"><%= notice %></p>
+
+<table>
+  <tr>
+    <th>Email Address</th>
+    <th>Encrypted Password</th>
+    <th>Sign In Count</th>
+    <th>Identification</th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+  <td><%= user.email %></td>
+  <td><%= user.encrypted_password %></td>
+  <td><%= user.sign_in_count %></td>
+  <td><%= user.id %></td>
+  <td><%= link_to 'Show', user %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>
