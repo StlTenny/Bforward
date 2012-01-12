@@ -26,3 +26,4 @@ ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "thinds.key")]
 #     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 #   end
 # end
+# another comment line
