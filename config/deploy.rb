@@ -1,6 +1,6 @@
 set :application, "bforward"
 set :repository,  "."
-set :deploy_to, "/home/thinds/web/apps/bforward"
+set :deploy_to, "/var/www/html/apps/bforward"
 
 set :scm, :git
 set :deploy_via, :copy
