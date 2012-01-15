@@ -31,4 +31,6 @@ Bforward::Application.configure do
   #Set up the localhost default mailer options for devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   
+  #Changing log location for deployment process
+  
 end
