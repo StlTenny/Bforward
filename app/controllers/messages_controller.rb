@@ -55,7 +55,7 @@ class MessagesController < ApplicationController
   end
 
   # PUT /messages/1
-  # PUT /messages/1.json
+  # PUT /messages/1.json man
   def update
     @message = Message.find(params[:id])
 
