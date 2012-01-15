@@ -12,6 +12,8 @@ role :web, location                          # Your HTTP server, Apache/etc
 role :app, location                         # This may be the same as your `Web` server
 role :db,  location, :primary => true # This is where Rails migrations will run
 
+set :normalize_asset_timestamps, false #To stop ugly error messages in assets
+
 set :user, "thinds"
 ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "thinds.key")] 
 
