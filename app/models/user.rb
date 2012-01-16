@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
   
   #Setup relationship between user and email
   has_many :messages, :dependent => :destroy
+  
+  ROLES = %w[admin subsc guest]
 end
