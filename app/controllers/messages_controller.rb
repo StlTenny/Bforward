@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+  load_and_authorize_resource :nested => :user
   # GET /messages
   # GET /messages.json
   def index

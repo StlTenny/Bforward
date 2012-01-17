@@ -1,6 +1,8 @@
 Bforward::Application.routes.draw do
 
   
+  resources :avatars
+
   devise_for :users, :path_prefix => 'd' 
   resources :users do
      resources :messages

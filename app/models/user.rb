@@ -12,4 +12,9 @@ class User < ActiveRecord::Base
   has_many :messages, :dependent => :destroy
   
   ROLES = %w[admin subsc guest]
+  #named_scope :with_role, lambda { |role| { :conditions => ["role = ?", role] }}
+  
+  #def role?(role)
+  #  role == role 
+  #end
 end
