@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   #routes GET /users and GET /users.json
+  before_filter :authenticate_user!
   load_and_authorize_resource
   
   def index
