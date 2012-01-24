@@ -14,7 +14,7 @@
     <th></th>
   </tr>
 
-<% @messages.each do |message| %>
+<% @current_user.messages.each do |message| %>
   <tr>
     <td><%= message.to %></td>
     <td><%= message.from %></td>
@@ -23,9 +23,7 @@
     <td><%= message.sent %></td>
     <td><%= message.received %></td>
     <td><%= message.has_attach %></td>
-    <td><%= link_to 'Show', message %></td>
-    <td><%= link_to 'Edit', edit_user_message_path(message) %></td>
-    <td><%= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', url_for([current_user, message])%></td>
   </tr>
 <% end %>
 </table>

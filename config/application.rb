@@ -46,5 +46,6 @@ module Bforward
     config.assets.version = '1.0'
     
     config.assets.debug = false
+    config.assets.logger = false
   end
 end

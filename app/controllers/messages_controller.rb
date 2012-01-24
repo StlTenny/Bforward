@@ -1,6 +1,7 @@
 class MessagesController < AuthorizedController
   before_filter :authenticate_owner!
   load_and_authorize_resource :through => :current_user
+  
   # GET /messages
   # GET /messages.json
   # index, show, new, edit, update, destroy
@@ -18,9 +19,10 @@ class MessagesController < AuthorizedController
   end
   
   def create
-    @message = @current_user.messages.build(params[id])
+    @message = @current_user.messages.build(params[:message])
     if @message.save
-      flash[:notice] = "Successfully Saved Message"
+      MessageMailer.message_send(@message).deliver
+      flash[:notice] = "Successfully Sent Message"
       redirect_to user_url(@message.user_id)
     else
       render :action => :new

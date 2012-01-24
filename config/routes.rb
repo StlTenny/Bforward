@@ -5,6 +5,7 @@ Bforward::Application.routes.draw do
   resources :users do
      resources :messages
   end
+  match "profile" => "users#show"
   get "home/index"
   root :to => "home#index"
 
