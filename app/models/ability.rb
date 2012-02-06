@@ -6,10 +6,11 @@ class Ability
     
     if user.role? :admin
       can :manage, :all
-    else if user.role? :subsc
-      can :create, :message
-      can :read. :message, Message do |message|
-        message.try(:message) == user 
+    else 
+        if user.role? :subsc
+        can :show, User, :id => user.id
+        can :manage, Message, :user_id => user.id 
+        end
     end
   end
 end

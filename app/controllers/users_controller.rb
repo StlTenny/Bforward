@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   #routes GET /users and GET /users.json
+  before_filter :authenticate_user!
+  load_and_authorize_resource
+  
   def index
     @users = User.all
     
@@ -10,7 +13,7 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
+   # @user = User.find(params[:id])
     
     respond_to do |format|
       format.html #automatically generates the html view
