@@ -1,11 +1,30 @@
-<% if user_signed_in? %>
-	<div id="hook_line">
+<div id="hook_line">
 	Tired of your boss and want to tell him off?</br>
 	Secret crush can't remain a secret any longer?</br>
 	Passive aggression getting the best of you?</br>
-	</div>
-	<div id="register_box">
-	</div>
-<% else %>
-<% end %>
+</div>
+<div id="stylized" class="myform">
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+	<h1>Sign-up form</h1>
+	<p>This is the basic look of my form without table</p>
+	
+	<label>Email
+	<span class="small">Add a valid address</span>
+	</label>
+	<input type="text" name="email" id="email" />
+	
+	<label>Password
+	<span class="small">Min. size 6 chars</span>
+	</label>
+	<input type="text" name="password" id="password" />
+	
+	<label>Password
+	<span class="small">Min. size 6 chars</span>
+	</label>
+	<input type="text" name="password_confirmation" id="password_confirmation" />
+	<button type="submit">Sign-Up</button>
+	<div class="spacer"></div>
+</div>
+<%end%>
 
