@@ -1,0 +1,86 @@
+body, div, h1, h2, h3, h4, p, ul, ol, li, dl, dt, dd, img, form, fieldset, blockquote{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.clear{
+  zoom: 1;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #edebec url('header.png') repeat-x;
+  z-index: 0;
+}
+
+#header{
+  height: 90px; padding: 6px 0px 0px 25px;
+}
+
+#user_nav{
+  position: absolute;
+  margin: 10px 0 0 0;
+  right: 10px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#hook_line{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5c5c5c;
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+#register_box{
+  height: 400px;
+  width: 320px;
+  float: right;
+  margin-right: 40px;
+  margin-top: 50px;
+  background: #b1b1b1;
+  padding: 25px 0px 0px 25px;
+  border-radius: 30px 30px 30px 30px;
+}
+
+ol{
+  padding: 0 0 0 5px;
+}
+
+#site_nav{
+  position: absolute;
+  margin: 45px 0 20px 0;
+  right: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  a:link{color: #fff; text-decoration: none};
+  a:visited{color: #fff; text-decoration: none};
+}
+
+#header_envelope{
+  display: block; width: 72px; height: 45px; margin: 0 0 100px 0;
+  background: url('envelope.png') no-repeat;
+}
+
+#header h1{
+  display: block; width: 325px; height: 70px; float: left; margin: 0 0 0 25px;
+  background: url('logo.png') no-repeat;
+}
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:22px;
+   width:100%;
+   background:#999;
+   background:#6cf url('footer.png') repeat-x;
+}
